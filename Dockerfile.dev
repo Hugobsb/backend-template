@@ -1,0 +1,14 @@
+FROM node:14-alpine
+ 
+WORKDIR /app
+
+ENV PORT=3000
+ 
+ADD package*.json ./
+
+EXPOSE 3000
+EXPOSE 9229
+
+COPY . .
+ 
+RUN npm i
